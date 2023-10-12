@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&family=Montserrat:ital,wght@0,500;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hind Siliguri", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.main {
+  padding: 30px;
+}
+
+/* This is for header and navigation */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav ul li {
+  margin: 0 10px;
+}
+.nav ul li:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.nav ul li a:hover {
+  color: red;
+  font-weight: bolder;
+  /* shadow */
+  text-shadow: 5px 0 5px #b33a3a;
+}
+
+/* this is for Welcome title */
+.header .title span {
+  color: red;
+}
+
+/* This is for main content */
+
+.content-title {
+  margin: 30px 0 0 20px;
+  font-size: large;
+}
+.content-title h2 {
+  border-bottom: 2px solid rgb(190, 86, 86);
+  border-right: 3px solid rgb(194, 103, 103);
+  width: fit-content;
+  border-radius: 10px;
+}
+.content {
+  display: flex;
+  align-items: center;
+  margin: 50px 0px;
+  border-bottom: 1px solid #eaeaea;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 33rem;
+  height: auto;
+  width: 100%;
+  padding: none;
+}
+/* this is for image section */
+.content .card .card-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.card .card-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .card-title h3{
+    border-bottom: 1px solid red;
+}
+
+.card .card-text {
+  margin-top: 3rem;
+  text-align: justify;
+}
+.card .card-text p{
+    padding: 3px;
+    text-align: center;
+}
+.card .more {
+  margin-top: 3rem;
+  text-align: left;
+}
+.card .more:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s;
+}
+.card .more a {
+  color: rgb(26, 155, 236);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* this is for menu hamburger */
+.header .btn-hamburger {
+  height: 70px;
+  /* position: absolute; */
+  display: none;
+}
+
+/* for screen size less than 900px */
+@media screen and (max-width: 900px) {
+  .header .btn-hamburger {
+    display: block;
+    right: 0px;
+    z-index: 1;
+  }
+  .main {
+    padding: 0;
+  }
+  .nav {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    margin-left: -100%;
+    transition: all 0.4s;
+    backdrop-filter: blur(2px);
+  }
+
+  .nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .nav ul li {
+    /* margin: 0rem 0rem 2rem 0rem; */
+    padding: 2rem 0rem;
+  }
+  .nav ul li:hover {
+    transform: scale(1.5);
+    transition: all 0.3s;
+  }
+  .nav ul li a {
+    font-weight: bolder;
+  }
+  .nav ul li a:hover {
+    text-shadow: 5px 0 5px #b33a3a;
+  }
+
+  .main .content-title h2 {
+    margin: 0 auto;
+    transition: all 0.3s;
+    font-size: 1.2rem;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* this should be deleted */
+    transition: all 0.4s;
+  }
+  .card .card-title h3 {
+    border-bottom: 2px solid #b33a3a;
+  }
+  .card .card-text {
+    width: 20rem;
+    text-align: center;
+  }
+  .show {
+    margin: 0;
+  }
+  .hide {
+    margin-left: 300%;
+  }
+
+  .more:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+  }
+  .box {
+    height: 10rem;
+    width: 15rem;
+    background-color: rgba(33, 148, 219, 0.559);
+    position: absolute;
+    z-index: -1;
+  }
+}
